@@ -96,4 +96,6 @@ Rule-based. At the close of each day it estimates demand for each product as the
 
 ## Public demo (read-only)
 
+Live demo: https://autonomous-supermarket-jksp.onrender.com (free hosting: the first visit after a quiet period can take about a minute to wake up).
+
 A hosted copy runs with `READ_ONLY=1`. It shows the Submitted Run and every screen, but `POST /api/runs` and `PUT /api/submitted` return 403, so visitors cannot start runs or change which run is featured. In that mode the backend also serves the built website, so one service runs on one port: build with `npm run render-build`, then start with `npm start`. The database is committed with the code and never written to, so a host with an ephemeral disk restarts from the same file. On free hosting the service sleeps when idle, so the first visit can take about a minute.
